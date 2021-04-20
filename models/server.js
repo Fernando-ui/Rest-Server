@@ -25,7 +25,30 @@ class Server{
 
         this.app.get('/inicio',  (req, res) => {
 
-            res.send('Hello World');
+            res.json({
+                msg:'get API',
+            });
+        
+        });
+        this.app.put('/inicio',  (req, res) => {
+
+            res.json({
+                msg:'put API',
+            });
+        
+        });
+        this.app.post('/inicio',  (req, res) => {
+
+            res.json({
+                msg:'post API',
+            });
+        
+        });
+        this.app.delete('/inicio',  (req, res) => {
+
+            res.json({
+                msg:'delete API',
+            });
         
         });
     }
