@@ -14,13 +14,16 @@ class Server{
         // Rutas De La Aplicacion
         this.routes();
 
-        
     }
+    
     middlewares(){
         // Cors
         this.app.use(cors());
         // Directorio publico
         this.app.use(express.static('public'));
+
+        // Lectura y parseo del body
+        this.app.use(express.json() );
 
     }
 
